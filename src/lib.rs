@@ -3,7 +3,7 @@ use pyo3::types::PyList;
 use pyo3::exceptions;
 
 #[pyfunction]
-fn join_strings(py: Python, string_list: &PyList, separator: Option<String>) -> PyResult<String> {
+fn join_strings(_py: Python, string_list: &PyList, separator: Option<String>) -> PyResult<String> {
     let sep = separator.unwrap_or_else(|| "".to_string());
     let mut strings = Vec::new();
     
